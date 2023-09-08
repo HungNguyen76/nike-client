@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "password": "123",
+      "isAdmin": true,
+      "firstName": "Minh Hung",
+      "lastName": "Nguyen",
+      "email": "hung@gmail.com",
+      "avatar": "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp",
+      "carts": []
+    },
+    {
+      "userName": "pvduc",
+      "password": "123",
+      "isAdmin": false,
+      "firstName": "Van Duc",
+      "lastName": "Phan",
+      "email": "pvduc@gmail.com",
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/final-project-react-66397.appspot.com/o/avatar.jpg?alt=media&token=5e3ae331-7ba1-460f-9119-8bed92233f7a",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Jordan Max Aura 5",
+      "url": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ecf3545-54b9-494d-9a93-d51e406b1053/jordan-max-aura-5-shoes-ZBZ4Pz.png",
+      "price": 5750000,
+      "stock": 34,
+      "type": "jordan",
+      "gender": "men"
+    }
+  ]
+}
