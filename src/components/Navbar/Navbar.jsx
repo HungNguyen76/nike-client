@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from '@img/nike.png'
 
 export default function Navbar() {
   return (
@@ -22,29 +23,34 @@ export default function Navbar() {
           {/* Collapsible wrapper */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             {/* Navbar brand */}
-            <a className="navbar-brand mt-2 mt-lg-0" href="#">
+            <Link className="navbar-brand mt-2 mt-lg-0" to="/">
               <img
-                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                src={logo}
                 height={15}
                 alt="MDB Logo"
                 loading="lazy"
               />
-            </a>
+            </Link>
             {/* Left links */}
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav mb-2 mb-lg-0 mx-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Dashboard
+                <a className="nav-link text-reset" href="#">
+                  Mens
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Team
+                <a className="nav-link text-reset" href="#">
+                  Womens
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Projects
+                <a className="nav-link text-reset" href="#">
+                  Kids
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-reset" href="#">
+                  Sales
                 </a>
               </li>
             </ul>

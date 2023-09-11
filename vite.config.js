@@ -11,6 +11,7 @@ export default defineConfig({
       "@rtk": fileURLToPath(new URL("./src/stores/slices", import.meta.url)),
       "@api": fileURLToPath(new URL("./src/services/api", import.meta.url)),
       "@comp": fileURLToPath(new URL("./src/components", import.meta.url)),
+      "@img": fileURLToPath(new URL("./src/assets/images", import.meta.url)),
     },
   },
 });

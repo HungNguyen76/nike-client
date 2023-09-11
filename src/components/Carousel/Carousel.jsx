@@ -1,4 +1,3 @@
-
 export default function Carousel() {
   return (
     <>
@@ -36,10 +35,11 @@ export default function Carousel() {
           {/* Single item */}
           <div className="carousel-item active">
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp"
+              src="https://static.nike.com/a/images/f_auto/dpr_2.2,cs_srgb/w_1213,c_limit/61409afd-bb00-4452-b5fb-b784b6a682a3/nike-just-do-it.jpg"
               className="d-block w-100"
               alt="Sunset Over the City"
             />
+           
             <div className="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -48,7 +48,7 @@ export default function Carousel() {
           {/* Single item */}
           <div className="carousel-item">
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp"
+              src="https://static.nike.com/a/images/f_auto/dpr_2.2,cs_srgb/w_1213,c_limit/a6665662-4558-4a61-a15b-eb3e3347af27/nike-just-do-it.png"
               className="d-block w-100"
               alt="Canyon at Nigh"
             />
@@ -60,7 +60,7 @@ export default function Carousel() {
           {/* Single item */}
           <div className="carousel-item">
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp"
+              src="https://static.nike.com/a/images/f_auto/dpr_2.2,cs_srgb/w_1209,c_limit/7a71fd99-88d0-4af1-9a76-d75b43965c9a/men-s-shoes-clothing-accessories.jpg"
               className="d-block w-100"
               alt="Cliff Above a Stormy Sea"
             />
