@@ -1,7 +1,23 @@
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import logo from '@img/nike.png'
+import { useState } from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import actions from '../../stores/actions';
+
 
 export default function Navbar() {
+  const store = useSelector(store => store)
+  console.log("store", store)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const handleLogout = () => {
+    if (window.confirm("Bạn có muốn đăng xuất không?")) {
+      localStorage.removeItem("token");
+      dispatch(actions.logOut());
+      navigate("/login");
+    }
+  };
+  const [isLogin, setIsLogin] = useState(() => localStorage.getItem("token") || null);
   return (
     <>
       {/* Navbar */}
@@ -109,15 +125,29 @@ export default function Navbar() {
                 data-mdb-toggle="dropdown"
                 aria-expanded="false"
               >
-                {/* <img
-                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                  className="rounded-circle"
-                  height={25}
-                  alt="Black and White Portrait of a Man"
-                  loading="lazy"
-                /> */}
+                {!isLogin ? (
+                    <i className="fas fa-user "></i>
+                ) : (
+                    <div className="avatarBox">
+                    <span>
+                      Xin chào,{" "}
+                      {`${store.userStore.data?.user_name
+                          .toUpperCase()
+                          .charAt(0)}${store.userStore.data?.user_name.slice(
+                          1
+                      )}`}
+                    </span>
+                      <img
+                          src="https://firebasestorage.googleapis.com/v0/b/final-project-react-eda92.appspot.com/o/images%2FMinhu.jpeg?alt=media&token=e37d9e4a-17c0-450f-af54-42b766f8d922"
+                          className="rounded-circle"
+                          height={25}
+                          alt="Black and White Portrait of a Man"
+                          loading="lazy"
+                      />
+                    </div>
+                )}
 
-                <i className="fas fa-user" />
+                {/*<i className="fas fa-user" />*/}
               </a>
               <ul
                 className="dropdown-menu dropdown-menu-end"
@@ -134,9 +164,19 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/login">
-                    Login
-                  </Link>
+                  {isLogin ? (
+                      <Link
+                          className="dropdown-item"
+                          to="/"
+                          onClick={handleLogout}
+                      >
+                        Logout
+                      </Link>
+                  ) : (
+                      <Link className="dropdown-item" to="/login">
+                        Login
+                      </Link>
+                  )}
                 </li>
               </ul>
             </div>

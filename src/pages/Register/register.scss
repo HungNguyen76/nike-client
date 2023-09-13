@@ -1,18 +1,18 @@
-.login_container {
+.register_container {
   font-family: sans-serif;
   border: 1px solid #d6d6d6;
   width: 30%;
   margin: 100px auto;
   padding: 20px;
-  .error-message {
-    color: #976060;
-    font-size: 12px;
-  }
   h2 {
     font-size: 20px;
     color: #8e0118;
     text-align: center;
     margin: 30px 0px;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 10px;
   }
   input {
     outline: none;
@@ -21,14 +21,17 @@
     padding: 7px;
     margin-top: -10px;
   }
-  .form-control {
+  .form_control {
     display: flex;
-    border: none;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 10px;
+    .error {
+      color: red;
+      font-size: 10px;
+    }
   }
-  .login_btn {
+  .register_btn {
     background-color: #8e0118;
     color: #fff;
     border: none;
@@ -37,7 +40,7 @@
     margin: 15px 0;
     cursor: pointer;
   }
-  .login_btn:hover {
+  .register_btn:hover {
     background-color: #fff;
     color: #8e0118;
     border: 1px solid #972f44;

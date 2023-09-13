@@ -12,6 +12,7 @@ export default defineConfig({
       "@api": fileURLToPath(new URL("./src/services/api", import.meta.url)),
       "@comp": fileURLToPath(new URL("./src/components", import.meta.url)),
       "@img": fileURLToPath(new URL("./src/assets/images", import.meta.url)),
+      "@utils": fileURLToPath(new URL("./src/utils", import.meta.url)),
     },
   },
 });
