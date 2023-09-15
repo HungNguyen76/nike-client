@@ -15,6 +15,7 @@ export default defineConfig({
       "@img": fileURLToPath(new URL("./src/assets/images", import.meta.url)),
       "@imgCate": fileURLToPath(new URL("./src/assets/images/category", import.meta.url)),
       "@utils": fileURLToPath(new URL("./src/utils", import.meta.url)),
+      "@scss": fileURLToPath(new URL("./src/scss/index.scss", import.meta.url)),
     },
   },
 });

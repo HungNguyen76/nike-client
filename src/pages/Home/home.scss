@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box
+}
+
+@import "@scss";
+
+.root_page {
+  width: 100%;
+  font-size: $fs_medium;
+  nav {
+    width: 100%;
+    // height: $navH;
+    font-size: 1em;
+    background-color: $cl_nav_main;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    // top: $beforeNavH;
+    z-index: $zi_max;
+    .nav_content {
+      width: 100%;
+      max-width: $maxW;
+      height: 100%;
+      font-size: 1em;
+      // display: flex;
+      // justify-content: space-between;
+    }
+  }
+  .body_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .body_container_center {
+      width: $maxW;
+      height: 100%;
+      padding: 0px 50px;
+    }
+  }
+  .footer_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .footer_container_center {
+      width: $maxW;
+    }
+  }
+}
+

@@ -1,9 +1,9 @@
 import Carousel from "@comp/Carousel/Carousel";
-import Category from "@/pages/Home/components/Categories/Category";
-import NewItem from "@/pages/Home/components/NewItems/NewItem";
+import Category from "./Categories/Category";
+import NewItem from "./NewItems/NewItem";
 
 
-export default function Home() {
+export default function HomePage() {
     return (
         <>
             <Carousel />
@@ -12,3 +12,4 @@ export default function Home() {
         </>
     )
 }
+
