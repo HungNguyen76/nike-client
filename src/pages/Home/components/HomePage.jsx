@@ -4,11 +4,11 @@ import NewItem from "@/pages/Home/components/NewItems/NewItem";
 
 
 export default function Home() {
-  return (
-    <>
-        <Carousel />
-        <Category />
-        <NewItem />
-    </>
-  )
+    return (
+        <>
+            <Carousel />
+            <Category />
+            <NewItem />
+        </>
+    )
 }

@@ -10,7 +10,6 @@ export const RootContext = createContext();
 function App() {
     const dispatch = useDispatch();
     const store = useSelector(store => store)
-
     /* Gửi token lên server và lưu thông tin vào user store */
     useEffect(() => {
         dispatch(actions.userActions.authenToken())
@@ -37,6 +36,10 @@ function App() {
                     <Route
                         path="/register"
                         element={LazyLoad(() => import("@/pages/Register/Register"))()}
+                    />
+                    <Route
+                        path="/category/:type"
+                        element={LazyLoad(() => import("@/pages/Home/components/Categories/Category"))()}
                     />
                 </Routes>
             </RootContext.Provider>
